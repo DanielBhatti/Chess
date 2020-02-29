@@ -6,9 +6,20 @@ namespace Chess
 {
     public interface IBoard
     {
+        string Id { get; set; }
+        ITile[] Tiles { get; set; }
+
+        void MovePiece();
+
+        void CapturePiece();
+
+        void InitializeBoard();
+
         void ResetBoard();
 
         void UndoMove();
+
+        void RedoMove();
 
         void SaveBoard();
 
@@ -16,12 +27,16 @@ namespace Chess
 
         bool IsCheckState();
 
-        bool IsCheckMateState();
+        bool IsCheckmateState();
 
-        int NumberOfWhitePieces();
-
-        int NumberOfBlackPieces();
+        int NumberOfPlayerPieces(Color color);
 
         int NumberOfTiles();
+
+        int CurrentTurn();
+
+        Color CurrentPlayer();
+
+        List<ITile> GetPossibleMoves(IPiece iPiece);
     }
 }
