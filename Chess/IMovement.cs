@@ -6,8 +6,6 @@ namespace Chess
 {
     public interface IMovement
     {
-        Enum MovementType { get; set; }
-
         List<ITile> Movements(ITile iTile);
     }
 }
