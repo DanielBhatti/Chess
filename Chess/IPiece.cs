@@ -6,8 +6,8 @@ namespace Chess
 {
     public interface IPiece
     {
-        string Id { get; set; }
-        Color Color { get; set; }
-        Enum Status { get; set; }
+        string Id { get; }
+        Color Color { get; }
+        Enum Status { get; }
     }
 }
