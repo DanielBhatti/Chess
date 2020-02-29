@@ -6,8 +6,8 @@ namespace Chess
 {
     public interface IBoard
     {
-        string Id { get; set; }
-        Graph Graph { get; set; }
+        string Id { get; }
+        Graph Graph { get; }
 
         void MovePiece(IPiece iPiece);
 
