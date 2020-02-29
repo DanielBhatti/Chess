@@ -14,7 +14,7 @@ namespace Chess.UnitTests.Graph
         }
 
         [Test]
-        public void Test1()
+        public void VerticesAreUnique()
         {
             bool passed = true;
             List<Vertex> vertices = new List<Vertex>() { };
