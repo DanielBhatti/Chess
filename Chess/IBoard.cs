@@ -9,9 +9,9 @@ namespace Chess
         string Id { get; set; }
         Graph Graph { get; set; }
 
-        void MovePiece();
+        void MovePiece(IPiece iPiece);
 
-        void CapturePiece();
+        void CapturePiece(IPiece iPiece);
 
         void InitializeBoard();
 
