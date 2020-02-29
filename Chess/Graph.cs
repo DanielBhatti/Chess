@@ -99,11 +99,13 @@ namespace Chess
     {
         public Vertex BeginningVertex { get; }
         public Vertex EndingVertex { get; }
+        public IMovement Movement { get; }
 
-        public Edge(Vertex beginningVertex, Vertex endingVertex)
+        public Edge(Vertex beginningVertex, Vertex endingVertex, IMovement iMovement)
         {
             BeginningVertex = beginningVertex;
             EndingVertex = endingVertex;
+            Movement = iMovement;
         }
 
         public override string ToString()
