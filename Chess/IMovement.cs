@@ -6,6 +6,6 @@ namespace Chess
 {
     public interface IMovement
     {
-        List<ITile> Movements(ITile iTile);
+        List<ITile> Movements(Graph graph, ITile iTile);
     }
 }
