@@ -45,11 +45,11 @@ namespace Chess
             else throw new ArgumentException("Could not find one or both of the specified vertices in the edge set.");
         }
 
-        public void AddEdge(Vertex beginningVertex, Vertex endingVertex, IMovement iMovement)
+        public void AddEdge(Vertex beginningVertex, Vertex endingVertex, Movement movement)
         {
             if (VertexSet.Contains(beginningVertex) && VertexSet.Contains(endingVertex))
             {
-                Edge edge = new Edge(beginningVertex, endingVertex, iMovement);
+                Edge edge = new Edge(beginningVertex, endingVertex, movement);
                 EdgeSet.Add(edge);
             }
             else throw new ArgumentException("Could not find one or both of the specified vertices in the edge set.");
@@ -106,13 +106,13 @@ namespace Chess
     {
         public Vertex BeginningVertex { get; }
         public Vertex EndingVertex { get; }
-        public IMovement Movement { get; }
+        public Movement Movement { get; }
 
-        public Edge(Vertex beginningVertex, Vertex endingVertex, IMovement iMovement)
+        public Edge(Vertex beginningVertex, Vertex endingVertex, Movement movement)
         {
             BeginningVertex = beginningVertex;
             EndingVertex = endingVertex;
-            Movement = iMovement;
+            Movement = movement;
         }
 
         public override string ToString()
