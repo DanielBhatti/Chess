@@ -67,7 +67,7 @@ namespace Chess
         {
             foreach(Vertex vertex in VertexSet)
             {
-                if (vertex.Tile.X == x && vertex.Tile.Y == y) return vertex;
+                if (vertex.X == x && vertex.Y == y) return vertex;
             }
             return null;
         }
