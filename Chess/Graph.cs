@@ -108,10 +108,10 @@ namespace Chess
         public Vertex EndVertex { get; }
         public Movement Movement { get; }
 
-        public Edge(Vertex beginningVertex, Vertex endingVertex, Movement movement)
+        public Edge(Vertex startVertex, Vertex endVertex, Movement movement)
         {
-            StartVertex = beginningVertex;
-            EndVertex = endingVertex;
+            StartVertex = startVertex;
+            EndVertex = endVertex;
             Movement = movement;
         }
 
