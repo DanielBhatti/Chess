@@ -24,8 +24,7 @@ namespace Chess.UnitTests.Graph
                 Random random = new Random();
                 int x = random.Next(0, 1000);
                 int y = random.Next(0, 1000);
-                Tile tile = new Tile(x, y);
-                Vertex vertex = new Vertex(tile);
+                Vertex vertex = new Vertex(x, y);
                 vertices.Add(vertex);
             }
 
