@@ -63,6 +63,15 @@ namespace Chess
             }
         }
 
+        public Vertex GetVertexByPosition(int x, int y)
+        {
+            foreach(Vertex vertex in VertexSet)
+            {
+                if (vertex.Tile.X == x && vertex.Tile.Y == y) return vertex;
+            }
+            return null;
+        }
+
         public List<Edge> GetEdgesContainingVertex(Vertex vertex)
         {
             List<Edge> edgesContainingVertex = new List<Edge>() { };
