@@ -45,6 +45,16 @@ namespace Chess
             else throw new ArgumentException("Could not find one or both of the specified vertices in the edge set.");
         }
 
+        public void AddEdge(Vertex beginningVertex, Vertex endingVertex, IMovement iMovement)
+        {
+            if (VertexSet.Contains(beginningVertex) && VertexSet.Contains(endingVertex))
+            {
+                Edge edge = new Edge(beginningVertex, endingVertex, iMovement);
+                EdgeSet.Add(edge);
+            }
+            else throw new ArgumentException("Could not find one or both of the specified vertices in the edge set.");
+        }
+
         public void AddEdge(IEnumerable<Edge> edges)
         {
             foreach(Edge edge in edges)
