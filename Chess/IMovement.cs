@@ -6,6 +6,6 @@ namespace Chess
 {
     public interface IMovement
     {
-        List<ITile> Movements(Graph graph, Vertex vertex);
+        List<Vertex> GetConnectedVertices(Graph graph, Vertex vertex);
     }
 }
