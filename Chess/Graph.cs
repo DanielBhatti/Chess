@@ -86,21 +86,9 @@ namespace Chess
         }
     }
 
-    public class Vertex
+    public class Vertex : Tile
     {
-        public string Id { get; }
-        public ITile Tile { get; }
-
-        public Vertex(ITile iTile)
-        {
-            Id = $"{iTile.Id}: ({iTile.X}, {iTile.Y})";
-            Tile = iTile;
-        }
-
-        public Vertex(string id)
-        {
-            Id = id;
-        }
+        public Vertex(int x, int y) : base(x, y) { }
 
         public override string ToString()
         {

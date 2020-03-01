@@ -13,7 +13,7 @@ namespace Chess
 
         public Tile(int x, int y)
         {
-            Id = this.GetHashCode().ToString();
+            Id = $"{this.GetHashCode()}: ({this.X}, {this.Y})";
             X = x;
             Y = y;
         }
