@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Chess.Chessboard
 {
-    class VerticalMovement
+    public class VerticalMovement : Movement
     {
     }
 }
