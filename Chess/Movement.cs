@@ -14,8 +14,8 @@ namespace Chess
             {
                 if (edge.Movement.GetType() == this.GetType())
                 {
-                    if (!edge.BeginningVertex.Equals(vertex)) connectedVertices.Add(vertex);
-                    else if (!edge.EndingVertex.Equals(vertex)) connectedVertices.Add(vertex);
+                    if (!edge.StartVertex.Equals(vertex)) connectedVertices.Add(vertex);
+                    else if (!edge.EndVertex.Equals(vertex)) connectedVertices.Add(vertex);
                 }
             }
             return connectedVertices;
@@ -29,8 +29,8 @@ namespace Chess
             {
                 if (edge.Movement.GetType() == this.GetType())
                 {
-                    if (!edge.BeginningVertex.Equals(vertex)) connectedVertices.Add(vertex);
-                    else if (!edge.EndingVertex.Equals(vertex)) connectedVertices.Add(vertex);
+                    if (!edge.StartVertex.Equals(vertex)) connectedVertices.Add(vertex);
+                    else if (!edge.EndVertex.Equals(vertex)) connectedVertices.Add(vertex);
                 }
             }
             return connectedVertices;
@@ -44,8 +44,8 @@ namespace Chess
             {
                 if (edge.Movement.GetType() == this.GetType())
                 {
-                    if (!edge.BeginningVertex.Equals(vertex)) connectedVertices.Add(vertex);
-                    else if (!edge.EndingVertex.Equals(vertex)) connectedVertices.Add(vertex);
+                    if (!edge.StartVertex.Equals(vertex)) connectedVertices.Add(vertex);
+                    else if (!edge.EndVertex.Equals(vertex)) connectedVertices.Add(vertex);
                 }
             }
             return connectedVertices;

@@ -41,7 +41,7 @@ namespace Chess
 
         public void AddEdge(Edge edge)
         {
-            if (VertexSet.Contains(edge.BeginningVertex) && VertexSet.Contains(edge.EndingVertex)) EdgeSet.Add(edge);
+            if (VertexSet.Contains(edge.StartVertex) && VertexSet.Contains(edge.EndVertex)) EdgeSet.Add(edge);
             else throw new ArgumentException("Could not find one or both of the specified vertices in the edge set.");
         }
 
@@ -77,7 +77,7 @@ namespace Chess
             List<Edge> edgesContainingVertex = new List<Edge>() { };
             foreach(Edge edge in EdgeSet)
             {
-                if(edge.BeginningVertex.Equals(vertex) || edge.EndingVertex.Equals(vertex))
+                if(edge.StartVertex.Equals(vertex) || edge.EndVertex.Equals(vertex))
                 {
                     edgesContainingVertex.Add(edge);
                 }
@@ -104,25 +104,25 @@ namespace Chess
 
     public class Edge
     {
-        public Vertex BeginningVertex { get; }
-        public Vertex EndingVertex { get; }
+        public Vertex StartVertex { get; }
+        public Vertex EndVertex { get; }
         public Movement Movement { get; }
 
         public Edge(Vertex beginningVertex, Vertex endingVertex, Movement movement)
         {
-            BeginningVertex = beginningVertex;
-            EndingVertex = endingVertex;
+            StartVertex = beginningVertex;
+            EndVertex = endingVertex;
             Movement = movement;
         }
 
         public override string ToString()
         {
-            return $"Edge: {BeginningVertex}, {EndingVertex}";
+            return $"Edge: {StartVertex}, {EndVertex}";
         }
 
         public bool Equals(Edge edge)
         {
-            if (edge.BeginningVertex.Equals(this.BeginningVertex) && edge.EndingVertex.Equals(this.EndingVertex)) return true;
+            if (edge.StartVertex.Equals(this.StartVertex) && edge.EndVertex.Equals(this.EndVertex)) return true;
             else return false;
         }
     }
